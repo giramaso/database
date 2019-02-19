@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %} Blog Page {% endblock %}
+
+{% block content %}
+	<h1>Here is our awesome blog</h1>
+	<form action = "{{ url_for('blog_post') }}" method="POST">
+		<label>Title</label>
+		<input type="text" name="title">
+		<label>Author</label>
+		<input type="text" name="author">
+		<label>Main Blog</label>
+		<input type="text" name="body">
+		<input type="submit" value="submit">
+	</form>
+{% endblock %}
